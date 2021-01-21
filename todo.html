@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>To Do</title>
+  </head>
+
+  <body>
+    <script>
+      var todos = ["Item 1", "Item 2", "Item 3"];
+
+      function addTodo(todoItem) {
+        todos.push(todoItem);
+        console.log(todos);
+      }
+
+      function editTodo(todoItem, todoPosition) {
+        todos[todoPosition] = todoItem;
+        console.log(todos);
+      }
+    </script>
+  </body>
+</html>
