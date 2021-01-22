@@ -7,17 +7,37 @@
 
   <body>
     <script>
-      var todos = ["Item 1", "Item 2", "Item 3"];
 
-      function addTodo(todoItem) {
-        todos.push(todoItem);
+      var todos = [
+        {todoText: "Item 1", completed: false},
+        {todoText: "Item 2", completed: false},
+        {todoText: "Item 3", completed: false}
+      ];
+
+      function add(initialTodoText) {
+        todos.push({todoText: initialTodoText, completed: false});
         console.log(todos);
       }
 
-      function editTodo(todoItem, todoPosition) {
-        todos[todoPosition] = todoItem;
+      function edit(position, newTodoText) {
+        todos[position].todoText = newTodoText;
         console.log(todos);
       }
+
+      function remove(position) {
+        todos.splice(position, 1);
+        console.log(todos);
+      }
+
+      function toggle(position) {
+        if (todos[position].completed === false) {
+          todos[position].completed = true;
+        } else {
+          todos[position].completed = false;
+        }
+        console.log(todos);
+      }
+
     </script>
   </body>
 </html>
