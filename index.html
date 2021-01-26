@@ -6,12 +6,16 @@
   </head>
 
   <body>
+
+    <button id='display-todos-button'>Display todos</button>
+    <button id='toggle-all-button'>Toggle all todos</button>
+
     <script>
 
       var todos = [
-        {todoText: "Item 1", completed: false},
-        {todoText: "Item 2", completed: false},
-        {todoText: "Item 3", completed: false}
+        {todoText: 'Item 1', completed: false},
+        {todoText: 'Item 2', completed: false},
+        {todoText: 'Item 3', completed: false}
       ];
 
       displayTodos();
@@ -65,6 +69,13 @@
         }
         displayTodos(); 
       }
+
+      var displayTodosButton = document.getElementById('display-todos-button');
+      displayTodosButton.addEventListener('click', displayTodos);
+
+      var toggleAllButton = document.getElementById('toggle-all-button');
+      toggleAllButton.addEventListener('click', toggleAll);
+
     </script>
   </body>
 </html>
